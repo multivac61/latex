@@ -1,0 +1,149 @@
+%% Þessi skrá var útbúin af Birki Sigfússyni og Ólafi Bogasyni, 16. apríl 2015. 
+%% Hún er gefin út án endurgjalds og hver sem er má lagfæra/breyta skránni eftir sínum hentugleika.
+
+
+% Mest notaða latex skráarformið er a4paper
+\documentclass[a4paper]{article}
+
+% Ákóðun á leturgerð til þess að geta birt íslenska stafi
+\usepackage[T1]{fontenc}
+
+% Íslenskir stafir og tunga í Latex
+\usepackage[utf8]{inputenc}
+\usepackage[icelandic]{babel}
+\selectlanguage{icelandic}
+
+
+% Aðrir gagnlegir pakkar sem mikið eru notaðir
+\usepackage{amsmath}	% American Mathematical Society pakki fyrir jöfnur
+\usepackage{amssymb}	% -11- fyrir allskyns tákn.
+\usepackage{calrsfs}	% Pakki fyrir ennþá fleiri stærðfræðitákn
+
+\usepackage{graphicx}	% Pakki til þess að auðvelda notendum að setja inn myndir
+\usepackage{caption}	% Pakki til þess að geta sett undirsagnir á myndir, töflur etc.
+
+\usepackage{hyperref}	% Pakki til þess að geta sett inn hlekki á vefsíður.
+
+\usepackage{listings}	% Pakki til að sýna source kóða
+\lstset{language=C}		% Veljum að styling fyrir C forritunartungumálið.
+
+
+
+\title{Einfalt \LaTeX\ skjal}	% Þetta er fyrirsögnin á skjalinu
+\author{Ólafur Bjarki Bogason \& Birkir Snær Sigfússon}				% Nafn höfundar
+
+\begin{document}
+
+% þessi skipun birtir fyrirsögn skjalsins, nafn höfundar og dagsetningu.
+\maketitle
+
+\begin{abstract}	% Þessi skipun býr til úrdrátt
+	Í þessu skjali er stiklað á stóru um helstu eiginleika \LaTeX\ en skjalinu er ætlað að einfalda byrjanda að læra á umhverfið. Skjalið er hugsað þannig að notendur lesi athugasemdirnar (texti sem kemur á eftir \%) og skipanirnar (texti beint á eftir \textbackslash) sem þeim fylgja og hafi þær til hliðsjónar þegar þeir sjálfir vinna að gerð sinna eigin \LaTeX\ skjala. \\
+
+\noindent \textit{Allar ábendingar eru vel þegnar og skulu sendast á netfangið } \href{mailto:obb7@hi.is}{\nolinkurl{obb7@hi.is}}. 
+\end{abstract}
+
+% þessi skipun birtir efnisyfirlit (aðeins af tölusettum fyrirsögnum
+\tableofcontents
+
+% Þessi skipun birtir Myndaskrá
+\listoffigures
+
+
+\section{Afhverju \LaTeX}
+\LaTeX\ er mikið notað við útgáfu vísindagreina sem og annarra akademískra pappíra. Í \LaTeX\ er mjög auðvelt að fá upp jöfnur þannig að þær líti vel út og eftir að maður hefur gengið í gegnum mesta hjallan við tileinkun á umhverfinu þá verður bæði einfalt og fljótlegt að nota það. Það er til heilt haf upplýsing um \LaTeX\ á netinu og hluti af því að læra að nota umhverfið er að læra að leita sér upplýsinga um það þar.
+
+Ég mæli með því að byrjendur kynni sér \href{https://www.overleaf.com}{Overleaf} ritilinn fyrir \LaTeX\ en í honum getur notandi búið til og breytt \LaTeX\ skjölum beint í vafranum sínum og séð breytingarnar á því hvernig skjalið kemur til með að líta út í rauntíma. Overleaf geymir öll gögn fyrir þig og vistar allar breytingar sjálfkrafa hjá sér þannig að notandi getur nálgast skjölin sín og allar eldri breytingar hvaðan og hvenær sem er.
+
+\section{Texti í \LaTeX}
+Þetta er venjulegur texti og \textbf{þetta er feitletraður texti} en \textit{þetta er skáletraður texti!}.
+
+Til þess að setja inn hlekki notum við \textbackslash href\{hlekkur\}\{Nafn á hlekk\}. Dæmi: \href{http://google.com}{Google}.
+
+
+\section{Upptalningar og lista í \LaTeX}
+Hér koma nokkur dæmi um lista í \LaTeX\ (frekari upplýsingar um lista má nálgast \href{http://en.wikibooks.org/wiki/LaTeX/List_Structures}{hér}) \\ % með \\ fer maður í nýja línu
+
+% Með noindent skipuninni komum við í veg fyrir spássíu
+\noindent Þetta er upptalning án röðunar\dots
+
+\begin{itemize}
+  \item Þetta er fyrsta innslagið
+  \item Þetta er annað innslagið
+  \item Og svo framvegis\ldots
+\end{itemize}
+
+% Með noindent skipuninni komum við í veg fyrir spássíu
+\noindent Þetta er listi á formi upptalningu 1, 2, 3\dots
+\begin{enumerate}
+  \item Þetta er fyrsta innslagið
+  \item Þetta er annað innslagið
+  \item Þetta er þriðja\ldots
+\end{enumerate}
+
+
+
+\section{Myndir og töflur}
+\subsection{Myndir í \LaTeX}
+Það getur verið erfitt að fá myndir til þess að vera á réttum stöðum í \LaTeX\ skrám. Best lausnin sem ég hef fundið við því er að nota minipage skipunina fyrir myndir:
+
+\begin{minipage}{\linewidth} % notum minipage til að koma myndum fyrir á einni síðu
+\makebox[\linewidth]{		 % notum þessa skipun til að koma myndinni fyrir á miðri síðu
+\includegraphics[keepaspectratio=true,scale=1]{duck.png}}	% scale breytan stýrir því hversu stór myndin er, m.v. raunstærð. Hér er scale jafnt og einn
+\captionof{figure}{Mmynd af önd}
+\end{minipage}
+
+
+
+\subsection{Töflur í \LaTeX}
+Til þess að setja upp töflur í \LaTeX\ notum við \textbackslash begin\{table\} \dots \textbackslash end\{table\} skipanirnar. Það er þæginlegt að nota \href{http://truben.no/table/}{Table Editor} til þess að setja upp gildi í töflu. Það sama gildir um töflur og myndir, þ.e. að það getur verið mjög leiðinlegt að fá þær til þess að birtast á réttum stöðum. Það hefur virkað vel að nota [ht] á eftir  \textbackslash begin\{table\} skipuninni, sjá kóða að neðan.
+
+\begin{table}[ht!] % [ht!] veldur því að taflan birtist á miðri síðunni
+\centering	% Komum töflunni fyrir á miðri síðunni.
+    \begin{tabular}{|l|l|}
+    \hline
+    Tíðni [Hz] & Mælt gildi \\ \hline
+    10             & 19.98        \\ \hline
+    100            & 21.36        \\ \hline
+    1000           & 19.54        \\ \hline
+    \end{tabular}
+     \caption{Þetta er tafla, staðsett á miðri síðu}
+\end{table}
+
+
+\section{Stærðfræði í \LaTeX}
+Stærðfræði er einn helsti styrkleiki \LaTeX. Frekari upplýsingar um stærðfræði umhverfið má lesa á \href{http://en.wikibooks.org/wiki/LaTeX/Mathematics}{Latex Mathematics Wikibook}.
+
+Hér er dæmi um jöfnu í texta, $e^{-i\pi} + 1 = 0$ en til þess að fá hana fram setur maður \$ á undan og eftir jöfnunni. Hér fyrir neðan er dæmi um jöfnur sem standa einar og sér.
+
+
+% align pakkinn er mjög sniðugur, þú raðar upp jöfnum með & virkjanum.
+\begin{align}
+	e^{-i\pi} + 1 &= \left(\frac{0}{42}\right) \\ % tvö bakslög (\\) eru notuð til þess að byrja nýja línu
+    \sum_{n=1}^{\infty} 2^{-n} &= 1 \\
+    \mathcal{F}\left\{ \delta(x) \right\} &= \int_{-\infty}^{\infty} \delta(x) e^{-j 2 \pi \omega x}\,dx\nonumber % Engin tala til tilvísunar
+\end{align}
+
+\pagebreak % Þessi skipun veldur því að texti heldur áfram á nýrri síðu.
+
+\section*{Þetta er ótölusett fyrirsögn}
+Til þess að fá ótölusettar fyrirsagnir, töflur, myndir etc. má nota * beint á eftir skipuninni. Þær skipanir sem eru merktir með * eru ekki birtir í efnisyfirliti.
+
+
+\section{Dæmi um kóða í \LaTeX}
+
+\begin{lstlisting}
+#include <stdio.h>
+ 
+int main() {
+ 
+    // Line comment.
+    printf("Hello world!");
+ 
+    return 0;
+}
+\end{lstlisting}
+
+
+
+\end{document}
