@@ -1,5 +1,5 @@
 ## Einfalt LaTeX skjal
-I þessu skjali er stiklað a storu um helstu eiginleika LaTeX en skjalinu er ætlað að einfalda byrjanda að læra a umhverfið.
+I þessu skjali er stiklað a stóru um helstu eiginleika LaTeX en skjalinu er ætlað að einfalda byrjanda að læra á LaTeX.
 
 ## Overleaf
-[Skjalið a Overlead](https://www.overleaf.com/read/dvrtvbgfgvsg)
+[Skjalið á Overlead](https://www.overleaf.com/read/dvrtvbgfgvsg)
