@@ -1,2 +1,2 @@
-# latex
-Latex, latex, latex - hvað væri ég án þín?
+# LaTeX
+Kennsla og sniðmát fyrir LaTeX skjöl á íslensku
