@@ -51,7 +51,7 @@
 
 
 \section{Afhverju \LaTeX}
-\LaTeX\ er mikið notað við útgáfu vísindagreina sem og annarra akademískra pappíra. Í \LaTeX\ er mjög auðvelt að fá upp jöfnur þannig að þær líti vel út og eftir að maður hefur gengið í gegnum mesta hjallan við tileinkun á umhverfinu þá verður bæði einfalt og fljótlegt að nota það. Það er til heilt haf upplýsing um \LaTeX\ á netinu og hluti af því að læra að nota umhverfið er að læra að leita sér upplýsinga um það þar.
+\LaTeX\ er mjög mikið notað við skrif á vísindagreinum sem og annarra akademískra pappíra. Það stafar meðal annars af því að í \LaTeX\ er mjög auðvelt að fá upp jöfnur þannig að þær líti vel út. Í byrjun getur verið erfitt að skilja \LaTeX\ en eftir að maður hefur gengið í gegnum mesta hjallan þá verður bæði einfalt og fljótlegt að nota það, þá helst vegna þess hversu mikið af upplýsingum um \LaTeX\ er til á netinu og aðstoð er auðvelt að fá.
 
 Ég mæli með því að byrjendur kynni sér \href{https://www.overleaf.com}{Overleaf} ritilinn fyrir \LaTeX\ en í honum getur notandi búið til og breytt \LaTeX\ skjölum beint í vafranum sínum og séð breytingarnar á því hvernig skjalið kemur til með að líta út í rauntíma. Overleaf geymir öll gögn fyrir þig og vistar allar breytingar sjálfkrafa hjá sér þannig að notandi getur nálgast skjölin sín og allar eldri breytingar hvaðan og hvenær sem er.
 
@@ -83,8 +83,8 @@ Hér koma nokkur dæmi um lista í \LaTeX\ (frekari upplýsingar um lista má n�
 
 
 
-\section{Myndir og töflur}
-\subsection{Myndir í \LaTeX}
+\section{Myndir og töflur í \LaTeX}
+\subsection{Myndir}
 Það getur verið erfitt að fá myndir til þess að vera á réttum stöðum í \LaTeX\ skrám. Best lausnin sem ég hef fundið við því er að nota minipage skipunina fyrir myndir:
 
 \begin{minipage}{\linewidth} % notum minipage til að koma myndum fyrir á einni síðu
@@ -95,7 +95,7 @@ Hér koma nokkur dæmi um lista í \LaTeX\ (frekari upplýsingar um lista má n�
 
 
 
-\subsection{Töflur í \LaTeX}
+\subsection{Töflur }
 Til þess að setja upp töflur í \LaTeX\ notum við \textbackslash begin\{table\} \dots \textbackslash end\{table\} skipanirnar. Það er þæginlegt að nota \href{http://truben.no/table/}{Table Editor} til þess að setja upp gildi í töflu. Það sama gildir um töflur og myndir, þ.e. að það getur verið mjög leiðinlegt að fá þær til þess að birtast á réttum stöðum. Það hefur virkað vel að nota [ht] á eftir  \textbackslash begin\{table\} skipuninni, sjá kóða að neðan.
 
 \begin{table}[ht!] % [ht!] veldur því að taflan birtist á miðri síðunni
@@ -130,7 +130,7 @@ Hér er dæmi um jöfnu í texta, $e^{-i\pi} + 1 = 0$ en til þess að fá hana 
 Til þess að fá ótölusettar fyrirsagnir, töflur, myndir etc. má nota * beint á eftir skipuninni. Þær skipanir sem eru merktir með * eru ekki birtir í efnisyfirliti.
 
 
-\section{Dæmi um kóða í \LaTeX}
+\section{Kóði í \LaTeX}
 
 \begin{lstlisting}
 #include <stdio.h>
