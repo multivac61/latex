@@ -25,7 +25,13 @@
 \usepackage{hyperref}	% Pakki til þess að geta sett inn hlekki á vefsíður.
 
 \usepackage{listings}	% Pakki til að sýna source kóða
-\lstset{language=C}		% Veljum að styling fyrir C forritunartungumálið.
+
+% Pakki til þess að geta verið með MATLAB kóða í skránni.
+% Athugið að með þessari skrá verður skráin mcode.sty að fylgja
+\usepackage{mcode}
+
+
+% http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings#Settings
 
 
 
@@ -131,18 +137,20 @@ Til þess að fá ótölusettar fyrirsagnir, töflur, myndir etc. má nota * bei
 
 
 \section{Kóði í \LaTeX}
+Í \LaTeX\ er mjög auðvelt að bæta við kóða, hvort sem hann er skrifaður í Matlab eða hvaða forritunartungumáli sem er. Allt um hvernig megi setja forritsbúta inn í \LaTeX\ skrár \href{http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings#Settings}{hér}.
+Það er bæði hægt að setja kóða beint í skránna, eins og svona\dots
 
 \begin{lstlisting}
-#include <stdio.h>
- 
-int main() {
- 
-    // Line comment.
-    printf("Hello world!");
- 
-    return 0;
-}
+% This Matlab will return a string containing 'Hello, world!'
+
+disp('Hello, world!')
+
+
 \end{lstlisting}
+
+\dots eða þá hafa hann í sér skrá og bæta henni við, eins og svona fyrir matlab skrár\dots
+
+\lstinputlisting{my_matlab_file.m}[style=Matlab]
 
 
 
