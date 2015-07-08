@@ -1,4 +1,4 @@
-%% Þessi skrá var útbúin af Birki Sigfússyni og Ólafi Bogasyni, 16. apríl 2015. 
+	%% Þessi skrá var útbúin af Birki Sigfússyni og Ólafi Bogasyni, 16. apríl 2015. 
 %% Hún er gefin út án endurgjalds og hver sem er má lagfæra/breyta skránni eftir sínum hentugleika.
 
 
@@ -44,9 +44,9 @@
 \maketitle
 
 \begin{abstract}	% Þessi skipun býr til úrdrátt
-	Í þessu skjali er stiklað á stóru um helstu eiginleika \LaTeX\ en skjalinu er ætlað að einfalda byrjanda að læra á umhverfið. Skjalið er hugsað þannig að notendur lesi athugasemdirnar (texti sem kemur á eftir \%) og skipanirnar (texti beint á eftir \textbackslash) sem þeim fylgja og hafi þær til hliðsjónar þegar þeir sjálfir vinna að gerð sinna eigin \LaTeX\ skjala. \\
+	Í þessu skjali er stiklað á stóru um helstu eiginleika \LaTeX\ en skjalinu er ætlað að einfalda byrjanda að læra á umhverfið. Skjalið er hugsað þannig að notendur lesi athugasemdirnar (texti sem kemur á eftir \%) og skipanirnar (texti beint á eftir \textbackslash) sem þeim fylgja og hafi þær til hliðsjónar þegar þeir sjálfir vinna að gerð sinna eigin \LaTeX\ skjala.\\
 
-\noindent \textit{Allar ábendingar eru vel þegnar og skulu sendast á netfangið } \href{mailto:obb7@hi.is}{\nolinkurl{obb7@hi.is}}. 
+\noindent \textit{Allar ábendingar eru vel þegnar og skulu sendast á netfangið } \href{mailto:obb7@hi.is}{\nolinkurl{olafur@genkiinstruments.com}}. 
 \end{abstract}
 
 % þessi skipun birtir efnisyfirlit (aðeins af tölusettum fyrirsögnum
@@ -56,10 +56,12 @@
 \listoffigures
 
 
-\section{Afhverju \LaTeX}
-\LaTeX\ er mjög mikið notað við skrif á vísindagreinum sem og annarra akademískra pappíra. Það stafar meðal annars af því að í \LaTeX\ er mjög auðvelt að fá upp jöfnur þannig að þær líti vel út. Í byrjun getur verið erfitt að skilja \LaTeX\ en eftir að maður hefur gengið í gegnum mesta hjallan þá verður bæði einfalt og fljótlegt að nota það, þá helst vegna þess hversu mikið af upplýsingum um \LaTeX\ er til á netinu og aðstoð er auðvelt að fá.
+\section{Afhverju \LaTeX?}
+\LaTeX\ er mjög mikið notað við skrif á vísindagreinum sem og annarra akademískra pappíra. Það stafar meðal annars af því að í \LaTeX\ er mjög auðvelt að fá upp jöfnur þannig að þær líti vel út. Í byrjun getur verið erfitt að skilja \LaTeX\ en eftir að maður hefur gengið í gegnum mesta hjallan þá verður bæði einfalt og fljótlegt að nota það, þá helst vegna þess hversu mikið af upplýsingum um \LaTeX\ er til á netinu og samfélagið er mjög virkt.
 
-Ég mæli með því að byrjendur kynni sér \href{https://www.overleaf.com}{Overleaf} ritilinn fyrir \LaTeX\ en í honum getur notandi búið til og breytt \LaTeX\ skjölum beint í vafranum sínum og séð breytingarnar á því hvernig skjalið kemur til með að líta út í rauntíma. Overleaf geymir öll gögn fyrir þig og vistar allar breytingar sjálfkrafa hjá sér þannig að notandi getur nálgast skjölin sín og allar eldri breytingar hvaðan og hvenær sem er.
+Ég mæli með því að byrjendur kynni sér \href{https://www.overleaf.com}{Overleaf} ritilinn en í honum getur notandi búið til og breytt \LaTeX\ skjölum beint í vafranum  og séð  hvernig skjalið mun líta út í rauntíma. Overleaf geymir öll gögn fyrir þig og vistar allar breytingar sjálfkrafa hjá sér þannig að notandi getur nálgast skjölin sín og allar eldri útgáfur af þeim hvaðan og hvenær sem er.
+
+Hér á eftir fylgir upplistun á einföldustu virkni sem allir notendur umhverfisins ættu að kunna:
 
 \section{Texti í \LaTeX}
 Þetta er venjulegur texti og \textbf{þetta er feitletraður texti} en \textit{þetta er skáletraður texti!}.
@@ -67,8 +69,9 @@
 Til þess að setja inn hlekki notum við \textbackslash href\{hlekkur\}\{Nafn á hlekk\}. Dæmi: \href{http://google.com}{Google}.
 
 
-\section{Upptalningar og lista í \LaTeX}
-Hér koma nokkur dæmi um lista í \LaTeX\ (frekari upplýsingar um lista má nálgast \href{http://en.wikibooks.org/wiki/LaTeX/List_Structures}{hér}) \\ % með \\ fer maður í nýja línu
+\section{Listar og upptalningar í \LaTeX}
+Hér koma nokkur dæmi um lista í \LaTeX.
+
 
 % Með noindent skipuninni komum við í veg fyrir spássíu
 \noindent Þetta er upptalning án röðunar\dots
@@ -87,22 +90,24 @@ Hér koma nokkur dæmi um lista í \LaTeX\ (frekari upplýsingar um lista má n�
   \item Þetta er þriðja\ldots
 \end{enumerate}
 
+Frekari upplýsingar um annars konar lista má nálgast \href{http://en.wikibooks.org/wiki/LaTeX/List_Structures}{hér}) \\ % með \\ fer maður í nýja línu
+
 
 
 \section{Myndir og töflur í \LaTeX}
 \subsection{Myndir}
-Það getur verið erfitt að fá myndir til þess að vera á réttum stöðum í \LaTeX\ skrám. Best lausnin sem ég hef fundið við því er að nota minipage skipunina fyrir myndir:
+Það getur verið erfitt að fá myndir til þess að haldast þar sem maður vill hafa þær í \LaTeX\ skrám. Besta lausnin sem ég hef fundið er að nota minipage skipunina fyrir myndir:
 
 \begin{minipage}{\linewidth} % notum minipage til að koma myndum fyrir á einni síðu
 \makebox[\linewidth]{		 % notum þessa skipun til að koma myndinni fyrir á miðri síðu
 \includegraphics[keepaspectratio=true,scale=1]{duck.png}}	% scale breytan stýrir því hversu stór myndin er, m.v. raunstærð. Hér er scale jafnt og einn
-\captionof{figure}{Mmynd af önd}
+\captionof{figure}{Mynd af önd}
 \end{minipage}
 
 
 
 \subsection{Töflur }
-Til þess að setja upp töflur í \LaTeX\ notum við \textbackslash begin\{table\} \dots \textbackslash end\{table\} skipanirnar. Það er þæginlegt að nota \href{http://truben.no/table/}{Table Editor} til þess að setja upp gildi í töflu. Það sama gildir um töflur og myndir, þ.e. að það getur verið mjög leiðinlegt að fá þær til þess að birtast á réttum stöðum. Það hefur virkað vel að nota [ht] á eftir  \textbackslash begin\{table\} skipuninni, sjá kóða að neðan.
+Til þess að setja upp töflur í \LaTeX\ notum við \textbackslash begin\{table\} \dots \textbackslash end\{table\} skipanirnar. Það er þæginlegt að nota \href{http://truben.no/table/}{Table Editor} til þess að setja upp gildi í töflu. Það sama gildir um töflur og myndir, þ.e. að það getur verið mjög leiðinlegt að fá töflur til þess að birtast á réttum stað. Það hefur virkað vel fyrir mig að nota [ht!] á eftir  \textbackslash begin\{table\} skipuninni, sjá kóða að neðan.
 
 \begin{table}[ht!] % [ht!] veldur því að taflan birtist á miðri síðunni
 \centering	% Komum töflunni fyrir á miðri síðunni.
@@ -116,11 +121,12 @@ Til þess að setja upp töflur í \LaTeX\ notum við \textbackslash begin\{tabl
      \caption{Þetta er tafla, staðsett á miðri síðu}
 \end{table}
 
+Frekari upplýsingar um töflur í \LaTeX\ má finna á \href{https://en.wikibooks.org/wiki/LaTeX/Tables}{Wikibooks} og \href{https://www.sharelatex.com/learn/Tables}{ShareLaTeX}.
 
 \section{Stærðfræði í \LaTeX}
-Stærðfræði er einn helsti styrkleiki \LaTeX. Frekari upplýsingar um stærðfræði umhverfið má lesa á \href{http://en.wikibooks.org/wiki/LaTeX/Mathematics}{Latex Mathematics Wikibook}.
+Stærðfræði er einn helsti styrkleiki \LaTeX\ (og í rauninni ein af ástæðunum fyrir því að það er enn í noktun í dag...)
 
-Hér er dæmi um jöfnu í texta, $e^{-i\pi} + 1 = 0$ en til þess að fá hana fram setur maður \$ á undan og eftir jöfnunni. Hér fyrir neðan er dæmi um jöfnur sem standa einar og sér.
+Hér er dæmi um jöfnu í texta, $e^{-i\pi} + 1 = 0$. Til þess að fá jöfnu í miðri setningu setur maður \$ á undan og eftir jöfnunni. Hér fyrir neðan er dæmi um jöfnur sem standa í eigin línu.
 
 
 % align pakkinn er mjög sniðugur, þú raðar upp jöfnum með & virkjanum.
@@ -130,6 +136,9 @@ Hér er dæmi um jöfnu í texta, $e^{-i\pi} + 1 = 0$ en til þess að fá hana 
     \mathcal{F}\left\{ \delta(x) \right\} &= \int_{-\infty}^{\infty} \delta(x) e^{-j 2 \pi \omega x}\,dx\nonumber % Engin tala til tilvísunar
 \end{align}
 
+
+Frekari upplýsingar um stærðfræði í \LaTeX\ má lesa á \href{http://en.wikibooks.org/wiki/LaTeX/Mathematics}{Latex Mathematics Wikibook}.
+
 \pagebreak % Þessi skipun veldur því að texti heldur áfram á nýrri síðu.
 
 \section*{Þetta er ótölusett fyrirsögn}
@@ -137,7 +146,7 @@ Til þess að fá ótölusettar fyrirsagnir, töflur, myndir etc. má nota * bei
 
 
 \section{Kóði í \LaTeX}
-Í \LaTeX\ er mjög auðvelt að bæta við kóða, hvort sem hann er skrifaður í Matlab eða hvaða forritunartungumáli sem er. Allt um hvernig megi setja forritsbúta inn í \LaTeX\ skrár \href{http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings#Settings}{hér}.
+Í \LaTeX\ er mjög auðvelt að bæta við kóða, í nánast hvaða forritunartungumáli sem er! Allt um hvernig eigi að setja inn forritsbúta í \LaTeX\ skrár má finna \href{http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings#Settings}{hér}.
 Það er bæði hægt að setja kóða beint í skránna, eins og svona\dots
 
 \begin{lstlisting}
@@ -148,10 +157,20 @@ disp('Hello, world!')
 
 \end{lstlisting}
 
-\dots eða þá hafa hann í sér skrá og bæta henni við, eins og svona fyrir matlab skrár\dots
+\dots eða þá má hafa hann í sér skrá og bæta henni við, eins og svona fyrir matlab skrár (Vó! Þú getur líka sett svona fínann ramma utan um kóðann!)\dots
 
-\lstinputlisting{my_matlab_file.m}[style=Matlab]
+\lstinputlisting[frame=single]{my_matlab_file.m}
 
+\href{https://www.sharelatex.com/learn/Code_listing}{Code listing} á ShareLaTeX er góður staður til þess að læra meira um kóða í \LaTeX.
+
+\section{Frekari upplýsingar um \LaTeX}
+Þeir staðir sem hjálpa mér mest við \LaTeX\ vinnslu eru
+
+\begin{itemize}
+	\item \href{https://www.sharelatex.com/learn/Main_Page}{ShareLaTeX} - geðveik all-around síða með upplýsingum um öll helstu atriði í \LaTeX.
+    \item \href{https://en.wikibooks.org/wiki/LaTeX}{\LaTeX} síðan á Wikibooks af svipuðu meiði og ShareLaTeX.
+    \item \href{https://en.wikipedia.org/wiki/LaTeX}{Wikipedia} - fyrir nördana sem vilja þekkja sögu \LaTeX.
+\end{itemize}
 
 
 \end{document}
